@@ -13,7 +13,8 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -27,9 +28,13 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <audio controls autoplay hidden>
-        <source src="music/background_music.mp3" type="audio/mp3">
-    </audio>
+    <script>
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -58,7 +63,6 @@
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -69,8 +73,12 @@
                         <div class="p-3" style="max-width: 1000px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Triệu Hùng & Trâm Anh</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+                                <h3 class="text-uppercase font-weight-normal text-white m-0"
+                                    style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
+                            <button type="button" class="btn-play mx-auto" data-toggle="modal" onclick="play()">
+                                <span></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -80,8 +88,13 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Triệu Hùng & Trâm Anh</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+                                <h3 class="text-uppercase font-weight-normal text-white m-0"
+                                    style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
+                            <button type="button" class="btn-play mx-auto" data-toggle="modal" onclick="play()">
+                                <span></span>
+                            </button>
+                            <audio id="audio" src="music/background_music.mp3" loop></audio>
                         </div>
                     </div>
                 </div>
@@ -102,16 +115,18 @@
 
 
     <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>        
+                    </button>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                            allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -135,7 +150,8 @@
                         <p>Triệu Việt Hùng</p>
                         <p>21/03/1996</p>
                         <p>Bạch Dương</p>
-                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Triệu Hùng</h3>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i
+                                class="fa fa-male text-primary pr-3"></i>Triệu Hùng</h3>
                         <!-- <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -158,7 +174,8 @@
                         <p>Vũ Thị Trâm Anh</p>
                         <p>18/09/2000</p>
                         <p>Xử Nữ</p>
-                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Trâm Anh</h3>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3"><i
+                                class="fa fa-female text-primary pr-3"></i>Trâm Anh</h3>
                         <!-- <div class="position-relative">
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -243,7 +260,7 @@
             <h1 class="font-secondary display-4 text-white">Ảnh Cưới Của Chúng Tôi</h1>
             <i class="far fa-heart text-white"></i>
         </div>
-        <div class="owl-carousel gallery-carousel">          
+        <div class="owl-carousel gallery-carousel">
             <div class="gallery-item">
                 <img class="img-fluid w-100" src="img/3.jpg" alt="">
                 <a href="img/3.jpg" data-lightbox="gallery">
@@ -256,7 +273,7 @@
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
-            
+
         </div>
     </div>
     <!-- Gallery End -->
@@ -272,7 +289,8 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">...tình yêu không phải là nhìn chằm chằm vào nhau, mà là nhìn chằm chằm về cùng một hướng...</h5>
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">...tình yêu không phải là nhìn chằm chằm vào
+                        nhau, mà là nhìn chằm chằm về cùng một hướng...</h5>
                 </div>
             </div>
             <div class="row">
@@ -436,8 +454,9 @@
                         <h4 class="mb-0">Số tài khoản : 102 714 3831</h4>
                     </div>
                 </div>
-            </div></div>
+            </div>
         </div>
+    </div>
     </div>
     <!-- RSVP End -->
 
@@ -471,7 +490,8 @@
     <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i
+            class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
